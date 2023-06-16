@@ -462,7 +462,9 @@
   line-height: 20px;
   text-decoration: none;
 }
-
+.footer__column-link:hover {
+  color: #c1c1c1c1;
+}
 .footer__social-icon {
   width: 16px;
   height: 16px;
