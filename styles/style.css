@@ -3,7 +3,7 @@
   min-width: 1100px;
   max-width: 1600px;
   margin: 0 auto;
-  font-family: "Helvica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
 }
@@ -17,13 +17,13 @@
   padding: 30px 80px 40px;
   position: relative;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .nav {
   /* Add flex properties here */
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .nav__logo {
@@ -42,7 +42,7 @@
 }
 
 .nav__link {
-  color: #000000;
+  color: #000;
   text-decoration: none;
   font-weight: bold;
 }
@@ -55,6 +55,7 @@
   line-height: 76px;
   font-weight: 500;
   margin-top: 150px;
+  margin-bottom: 0px;
   max-width: 544px;
 }
 
@@ -62,11 +63,12 @@
   font-size: 20px;
   line-height: 30px;
   margin-top: 32px;
+  margin-bottom: 0px;
   max-width: 532px;
 }
 
 .header__image {
-  z-index: 1;
+  z-index: -1;
   max-width: 636px;
   position: absolute;
   top: 136px;
@@ -190,35 +192,30 @@
 
 .person_name_feynman {
   /* Use correct values of top/right/bottom/left properties to position the element */
-  right: 319px;
   top: -30px;
   left: 319px;
 }
 
 .person_name_burbidge {
   /* Use correct values of top/right/bottom/left properties to position the element */
-  position: absolute;
   top: 96px;
   right: 125px;
 }
 
 .person_name_cannon {
   /* Use correct values of top/right/bottom/left properties to position the element */
-  position: absolute;
   right: 216px;
   bottom: 18px;
 }
 
 .person_name_mitchell {
   /* Use correct values of top/right/bottom/left properties to position the element */
-  position: absolute;
   left: 142px;
   bottom: 82px;
 }
 
 .person_name_tarter {
   /* Use correct values of top/right/bottom/left properties to position the element */
-  position: absolute;
   top: 79px;
   left: 159px;
 }
@@ -247,7 +244,7 @@
 /* staff section styles */
 .staff {
   padding: 100px 0 140px;
-  background-image: url(/images/staff_picks_background.jpg);
+  background-image: url(../images/staff_picks_background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -271,7 +268,7 @@
 }
 .staff__cards {
   max-width: 760px;
-  margin: 68px auto;
+  margin: 68px auto 0;
   padding-left: 0px;
   display: flex;
   flex-wrap: wrap;
@@ -382,7 +379,6 @@
   font-weight: 500;
   z-index: 1;
   margin-right: 120px;
-  margin-top: 20px;
 }
 
 .about__content {
@@ -392,11 +388,12 @@
   max-width: 660px;
 }
 .about__paragraph {
+  margin-top: 0;
   margin-bottom: 32px;
   position: relative;
   z-index: 1;
 }
-.about__paragraph_no-margin {
+.about__paragraph:last-child {
   margin-bottom: 0px;
 }
 .about__circle {
@@ -413,16 +410,12 @@
 .footer {
   box-sizing: border-box;
   background-color: #1f1f1f;
-  padding-top: 68px;
+  padding: 68px 102px 60px 80px;
 }
 
 .footer__columns {
   color: #fff;
   display: flex;
-  margin-right: 102px;
-  margin-left: 80px;
-  padding-top: 68px;
-  padding-bottom: 60px;
 }
 
 .footer__column_content_hours {
@@ -431,7 +424,7 @@
 }
 
 .footer__column_content_social {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .footer__logo {
@@ -452,8 +445,9 @@
 }
 
 .footer__column-heading {
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 20px;
+  font-size: inherit;
 }
 
 .footer__column-link {
@@ -461,6 +455,9 @@
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
 }
 .footer__column-link:hover {
   color: #c1c1c1;
@@ -473,4 +470,7 @@
 .footer__copyright {
   color: #fff;
   margin-top: 108px;
+  padding-right: 80px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
 }
